@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+    flask:
+        build: .
+        volumes:
+            - ./projects:/code
+        ports:
+            - "5000:5000"
+        command: python api/api.py
